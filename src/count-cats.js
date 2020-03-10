@@ -1,4 +1,11 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(matrix) {
+    let newCats = [];
+    newCats = matrix.flat();
+    let counter = 0;
+    for (let i of newCats) {
+        if (i === '^^') {
+            counter = counter + 1;
+        }
+    }
+    return counter;
 };
